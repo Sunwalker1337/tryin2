@@ -1,6 +1,7 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 let gallery = document.querySelector('.gallery')
+
 let imageGallery = galleryItems
 .map((element)=>
 
@@ -23,6 +24,16 @@ gallery.addEventListener('click', zoomIn);
 function zoomIn () {
     event.preventDefault()
     if(event.target.nodeName === 'IMG'){
-        console.log('banana')
+        let zoom = 
+        basicLightbox.create(`<img src='${event.target.getAttribute('data-source')}' alt='${event.target.getAttribute('alt')}'>`)
+        zoom.show()
+        gallery.addEventListener('keydown', (event)=>{
+            if(event.keyCode === 27){
+                zoom.close()
+            }
+        })
     }
 }
+
+
+
