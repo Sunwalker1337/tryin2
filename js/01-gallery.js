@@ -6,7 +6,7 @@ let imageGallery = galleryItems
 .map((element)=>
 
 `<div class="gallery__item">
-  <a class="gallery__link" href="large-image.jpg">
+  <a class="gallery__link" href="${element.original}">
     <img
       class="gallery__image"
       src="${element.preview}"
