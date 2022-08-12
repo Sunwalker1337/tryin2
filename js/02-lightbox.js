@@ -18,12 +18,9 @@ let imageGallery = galleryItems
 gallery.insertAdjacentHTML("afterbegin", imageGallery.join(' '))
 
 var lightbox = new SimpleLightbox('.gallery a', { 
-  captions : true,
-  captionSelector: 'img',
-  captionsData: 'alt',
-  captionPosition: 'bottom',
-  captionDelay: 250,
 
+  captionsData: 'alt',
+  captionDelay: 250,
  });
 
 
